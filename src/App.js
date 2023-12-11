@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import Header from "./Header";
+import Product from "./Product";
+import { ThemeContext } from "./Theme";
+import { CartProvider } from "react-use-cart";
 
 function App() {
+
+  const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
+  console.log("theme", theme);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <div
+      className="App"
+      style={{ backgroundColor: theme.backgroundColor, color: theme.color }}
+    >
+      
+        <button className="corner-button" onClick={toggleTheme}>
+          Toggle Theme
+        </button>
+        <CartProvider>
+        <Header />
+        <Product />
+        </CartProvider>
+        </div>
+       
+    
+    </>
   );
 }
 

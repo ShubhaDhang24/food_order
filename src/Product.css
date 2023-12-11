@@ -1,0 +1,25 @@
+/* CardComponent.css */
+
+.card {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px; /* Adjust the width as needed */
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-img-top{
+    width: 150px; /* Adjust the image width as needed */
+    height: 100px; /* Adjust the image height as needed */
+    align-content: center;
+  }
+  
+  .card-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
