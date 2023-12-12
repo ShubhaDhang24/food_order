@@ -1,0 +1,17 @@
+.header{
+    text-align: center;
+    background-color: aquamarine;
+    color: black;
+}
+.body{
+    background-color: bisque;
+    text-decoration: solid;
+    text-align: left;
+    color: blueviolet;
+    text-size-adjust: 20;
+}
+.btn{
+    background-color: brown;
+    color: white;
+    align-items: flex-start;
+}
